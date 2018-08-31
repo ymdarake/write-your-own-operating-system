@@ -7,5 +7,5 @@
     - binutils
     - libc6-dev-i386
     - VirtualBox
-    - grub-legacy
+    - grub2
     - xorriso
