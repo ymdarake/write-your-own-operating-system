@@ -34,4 +34,5 @@ mykernel.iso: mykernel.bin
 
 run: mykernel.iso
 		(killall VirtualBox && sleep 1) || true
+		vboxmanage list vms | grep -c My || vboxmanage createvm --name "My Operating System" --ostype Other --register
 		VirtualBox --startvm "My Operating System" &
