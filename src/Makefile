@@ -34,5 +34,6 @@ mykernel.iso: mykernel.bin
 
 run: mykernel.iso
 		(killall VirtualBox && sleep 1) || true
-		vboxmanage list vms | grep -c My || vboxmanage createvm --name "My Operating System" --ostype Other --register
+		# TODO: create vm manually
+		# TODO: create from cli like: vboxmanage list vms | grep -c My || vboxmanage createvm --name "My Operating System" --ostype Other --register && VBoxManage modifyvm "My Operating System" --cpus 2 --memory 2048 --vram 12 && vboxmanage ... (install iso...)
 		VirtualBox --startvm "My Operating System" &
